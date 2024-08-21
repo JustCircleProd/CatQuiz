@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#222222</color>
+    <color name="white">#FDFDFD</color>
+
+    <color name="brand_text_color">@color/white</color>
+
+    <color name="element_background">#F8F8F8</color>
+
+    <color name="card_background">@color/element_background</color>
+
+    <color name="dialog_background">@color/element_background</color>
+
+    <color name="line_color">#A8AAAAAA</color>
+
+    <color name="black_text_color">@color/black</color>
+    <color name="gray_text_color">#707070</color>
+
+    <color name="coins_icon_color">#FFD700</color>
+
+    <color name="back_icon_color">@color/white</color>
+    <color name="back_button_ripple_color">#66FDFDFD</color>
+
+    <color name="close_dialog_icon_color">#707070</color>
+
+    <color name="btn_background">@color/element_background</color>
+
+    <color name="second_btn_text_color">@color/element_background</color>
+
+    <color name="correct_answer_color">#A6F0B8</color>
+    <color name="incorrect_answer_color">#F3A7B2</color>
+
+
+    <color name="main_color">#F5A766</color>
+
+    <color name="upper_gradient_color">#E67D73</color>
+    <color name="lower_gradient_color">#F5A766</color>
+
+    <color name="accent_text_color">#E48A76</color>
+
+    <color name="progress_indicator_color">#F4B58F</color>
+    <color name="progress_track_color">#F9E3D2</color>
+
+    <color name="main_icon_color">#F2A984</color>
+
+    <color name="close_button_ripple_color">#66E48A76</color>
+
+    <color name="btn_stroke_color">#E48A76</color>
+    <color name="btn_ripple_color">#99E48A76</color>
+
+    <color name="second_btn_color">#F3A36F</color>
+    <color name="second_btn_ripple_color">#99FDFDFD</color>
+</resources>

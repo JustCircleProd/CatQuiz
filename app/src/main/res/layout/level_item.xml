@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/btn_background"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="@dimen/button_corner_radius"
+    app:cardElevation="@dimen/button_elevation"
+    app:rippleColor="@color/btn_ripple_color"
+    app:strokeColor="@color/btn_stroke_color"
+    app:strokeWidth="@dimen/button_stroke_width">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/level_card_inner_margin"
+            android:layout_marginTop="@dimen/level_card_inner_margin"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/icon_lock"
+                android:layout_width="@dimen/level_icon_lock_size"
+                android:layout_height="@dimen/level_icon_lock_size"
+                android:layout_marginEnd="@dimen/level_icon_lock_margin_end"
+                android:contentDescription="@string/locked_level_icon_content_description"
+                android:src="@drawable/icon_lock"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/level_2_name"
+                android:textAlignment="center"
+                android:textColor="@color/gray_text_color"
+                android:textSize="@dimen/level_name_text_size" />
+
+        </LinearLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/level_card_inner_margin"
+            android:layout_marginTop="@dimen/level_progress_margin_top"
+            android:layout_marginBottom="@dimen/level_card_inner_margin"
+            android:indeterminate="false"
+            app:indicatorColor="@color/progress_indicator_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_layout"
+            app:trackColor="@color/progress_track_color"
+            app:trackCornerRadius="@dimen/level_progress_track_corner_radius"
+            app:trackThickness="@dimen/level_progress_track_thickness" />
+
+        <LinearLayout
+            android:id="@+id/progress_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/progress_indicator"
+            app:layout_constraintEnd_toEndOf="@id/progress_indicator"
+            app:layout_constraintStart_toStartOf="@id/progress_indicator"
+            app:layout_constraintTop_toTopOf="@id/progress_indicator"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:id="@+id/progress_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textColor="@color/black_text_color"
+                android:textSize="@dimen/level_progress_label_text_size"
+                tools:text="@string/open_for_n_coins" />
+
+            <ImageView
+                android:id="@+id/progress_coins_icon"
+                android:layout_width="@dimen/level_price_icon_coins_size"
+                android:layout_height="@dimen/level_price_icon_coins_size"
+                android:layout_marginStart="@dimen/icon_coins_margin_start"
+                android:contentDescription="@string/icon_coins_content_description"
+                android:src="@drawable/icon_coins"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/confetti_animation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_rawRes="@raw/confetti_level_unlocked_animation"
+            app:lottie_speed="0.45" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

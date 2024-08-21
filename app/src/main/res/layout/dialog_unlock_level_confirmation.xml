@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:background="@drawable/dialog_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dialog_title_layout_margin_top">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dialog_main_margin"
+            android:text="@string/unlock_level_dialog_title"
+            android:textColor="@color/gray_text_color"
+            android:textSize="@dimen/dialog_title_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/cancel_btn"
+            android:layout_width="@dimen/cancel_icon_button_size"
+            android:layout_height="@dimen/cancel_icon_button_size"
+            android:layout_marginEnd="@dimen/dialog_cancel_icon_button_margin_end"
+            android:background="@drawable/close_button_ripple_effect"
+            android:contentDescription="@string/close_dialog_content_description"
+            android:src="@drawable/icon_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@id/title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dialog_main_margin"
+        android:gravity="center"
+        android:text="@string/unlock_level_confirmation"
+        android:textAlignment="center"
+        android:textColor="@color/gray_text_color"
+        android:textSize="@dimen/dialog_hint_text_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dialog_main_margin"
+        android:layout_marginTop="@dimen/dialog_buttons_layout_top_margin"
+        android:layout_marginBottom="@dimen/dialog_main_margin"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_btn_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/raw_buttons_horizontal_margin"
+            android:layout_weight="1"
+            android:backgroundTint="@color/btn_background"
+            android:elevation="@dimen/button_elevation"
+            android:ellipsize="end"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:maxLines="1"
+            android:minHeight="0dp"
+            android:paddingHorizontal="@dimen/button_padding_horizontal"
+            android:paddingVertical="@dimen/button_padding_vertical"
+            android:stateListAnimator="@null"
+            android:text="@string/cancel"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black_text_color"
+            android:textSize="@dimen/button_text_size"
+            app:cornerRadius="@dimen/button_corner_radius"
+            app:rippleColor="@color/btn_ripple_color"
+            app:strokeColor="@color/btn_stroke_color"
+            app:strokeWidth="@dimen/button_stroke_width" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submit_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/raw_buttons_horizontal_margin"
+            android:layout_weight="1"
+            android:backgroundTint="@color/second_btn_color"
+            android:elevation="@dimen/button_elevation"
+            android:ellipsize="end"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:maxLines="1"
+            android:minHeight="0dp"
+            android:paddingHorizontal="@dimen/button_padding_horizontal"
+            android:paddingVertical="@dimen/button_padding_vertical"
+            android:stateListAnimator="@null"
+            android:text="@string/unlock"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/second_btn_text_color"
+            android:textSize="@dimen/button_text_size"
+            app:cornerRadius="@dimen/button_corner_radius"
+            app:rippleColor="@color/second_btn_ripple_color" />
+
+    </LinearLayout>
+
+</LinearLayout>

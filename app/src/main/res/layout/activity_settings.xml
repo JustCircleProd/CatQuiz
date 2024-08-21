@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".settings.presentation.SettingsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/brand_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/screen_content_space_size"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/brand_text_color"
+            android:textSize="@dimen/brand_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/back_btn"
+            app:layout_constraintEnd_toEndOf="@id/root_cardview"
+            app:layout_constraintStart_toStartOf="@id/root_cardview"
+            app:layout_constraintTop_toTopOf="@id/back_btn" />
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="@dimen/back_icon_button_size"
+            android:layout_height="@dimen/back_icon_button_size"
+            android:layout_marginTop="@dimen/screen_content_space_size"
+            android:layout_marginBottom="@dimen/brand_text_with_back_button_margin_bottom"
+            android:background="@drawable/back_button_ripple_effect"
+            android:contentDescription="@string/back"
+            android:src="@drawable/icon_back"
+            app:layout_constraintBottom_toTopOf="@id/root_cardview"
+            app:layout_constraintEnd_toStartOf="@id/brand_label"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/root_cardview"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/root_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/screen_content_space_size"
+            android:layout_marginBottom="@dimen/screen_content_space_size"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back_btn">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/inner_padding">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/without_quiz_hints_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/btn_background"
+                    app:cardCornerRadius="@dimen/button_corner_radius"
+                    app:cardElevation="@dimen/button_elevation"
+                    app:strokeColor="@color/btn_stroke_color"
+                    app:strokeWidth="@dimen/button_stroke_width">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="@dimen/button_padding_horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/without_quiz_hints_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/without_quiz_hints"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/button_text_size"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/without_quiz_hints_switch"
+                            app:layout_constraintHorizontal_chainStyle="spread_inside"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/without_quiz_hints_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/without_quiz_hints_tv"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/reset_progress_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/button_margin_between"
+                    android:backgroundTint="@color/btn_background"
+                    android:elevation="@dimen/button_elevation"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:minHeight="0dp"
+                    android:paddingHorizontal="@dimen/button_padding_horizontal"
+                    android:paddingVertical="@dimen/button_padding_vertical"
+                    android:stateListAnimator="@null"
+                    android:text="@string/reset_progress"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/black_text_color"
+                    android:textSize="@dimen/button_text_size"
+                    app:cornerRadius="@dimen/button_corner_radius"
+                    app:rippleColor="@color/btn_ripple_color"
+                    app:strokeColor="@color/btn_stroke_color"
+                    app:strokeWidth="@dimen/button_stroke_width" />
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:layout_marginTop="@dimen/line_top_margin"
+                    android:layout_marginBottom="@dimen/line_bottom_margin"
+                    android:background="@color/line_color" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/rate_app_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/btn_background"
+                    android:elevation="@dimen/button_elevation"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:minHeight="0dp"
+                    android:paddingHorizontal="@dimen/button_padding_horizontal"
+                    android:paddingVertical="@dimen/button_padding_vertical"
+                    android:stateListAnimator="@null"
+                    android:text="@string/rate_app"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/black_text_color"
+                    android:textSize="@dimen/button_text_size"
+                    app:cornerRadius="@dimen/button_corner_radius"
+                    app:rippleColor="@color/btn_ripple_color"
+                    app:strokeColor="@color/btn_stroke_color"
+                    app:strokeWidth="@dimen/button_stroke_width" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/share_app_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/button_margin_between"
+                    android:backgroundTint="@color/btn_background"
+                    android:elevation="@dimen/button_elevation"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:minHeight="0dp"
+                    android:paddingHorizontal="@dimen/button_padding_horizontal"
+                    android:paddingVertical="@dimen/button_padding_vertical"
+                    android:stateListAnimator="@null"
+                    android:text="@string/share_app"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/black_text_color"
+                    android:textSize="@dimen/button_text_size"
+                    app:cornerRadius="@dimen/button_corner_radius"
+                    app:rippleColor="@color/btn_ripple_color"
+                    app:strokeColor="@color/btn_stroke_color"
+                    app:strokeWidth="@dimen/button_stroke_width" />
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height"
+                    android:layout_marginTop="@dimen/line_top_margin"
+                    android:layout_marginBottom="@dimen/line_bottom_margin"
+                    android:background="@color/line_color" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/developers_and_licenses_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/btn_background"
+                    android:elevation="@dimen/button_elevation"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:minHeight="0dp"
+                    android:paddingHorizontal="@dimen/button_padding_horizontal"
+                    android:paddingVertical="@dimen/button_padding_vertical"
+                    android:stateListAnimator="@null"
+                    android:text="@string/developers_and_licenses"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/black_text_color"
+                    android:textSize="@dimen/button_text_size"
+                    app:cornerRadius="@dimen/button_corner_radius"
+                    app:rippleColor="@color/btn_ripple_color"
+                    app:strokeColor="@color/btn_stroke_color"
+                    app:strokeWidth="@dimen/button_stroke_width" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

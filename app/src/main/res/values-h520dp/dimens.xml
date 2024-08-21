@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="developers_licenses_content_height">380dp</dimen>
+
+    <dimen name="question_height">160dp</dimen>
+
+    <dimen name="audio_question_size">88dp</dimen>
+
+    <dimen name="video_question_width">284dp</dimen>
+
+    <dimen name="question_top_margin">8dp</dimen>
+    <dimen name="question_bottom_margin">12dp</dimen>
+
+    <dimen name="quiz_progress_indicator_margin_bottom">8dp</dimen>
+</resources>

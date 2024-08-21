@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".introduction.presentation.IntroductionActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/brand_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/screen_content_space_size"
+            android:layout_marginTop="@dimen/screen_content_space_size"
+            android:layout_marginBottom="@dimen/brand_text_margin_bottom"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/brand_text_color"
+            android:textSize="@dimen/brand_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/view_pager"
+            app:layout_constraintEnd_toEndOf="@id/view_pager"
+            app:layout_constraintStart_toStartOf="@id/view_pager" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/screen_content_space_size"
+            android:layout_marginTop="@dimen/introduction_dots_margin_top"
+            android:layout_marginBottom="@dimen/screen_content_space_size"
+            app:dotsColor="@color/white"
+            app:dotsSize="@dimen/introduction_dots_size"
+            app:dotsSpacing="@dimen/introduction_dots_spacing"
+            app:layout_constraintEnd_toEndOf="@id/view_pager"
+            app:layout_constraintStart_toStartOf="@id/view_pager"
+            app:layout_constraintTop_toBottomOf="@id/view_pager"
+            app:selectedDotColor="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

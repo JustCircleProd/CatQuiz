@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".quizResult.presentation.QuizResultActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/screen_with_banner_ad_root_layout_bottom_margin">
+
+            <TextView
+                android:id="@+id/brand_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/screen_content_space_size"
+                android:layout_marginTop="@dimen/screen_content_space_size"
+                android:layout_marginBottom="@dimen/brand_text_margin_bottom"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/brand_text_color"
+                android:textSize="@dimen/brand_text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/root_cardview"
+                app:layout_constraintEnd_toEndOf="@id/root_cardview"
+                app:layout_constraintStart_toStartOf="@id/root_cardview"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/root_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/screen_content_space_size"
+                app:cardBackgroundColor="@color/card_background"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/brand_label">
+
+                <LinearLayout
+                    android:id="@+id/loading_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/inner_padding"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/tv_loading_result_text"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="@dimen/hint_text_size" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/loading_animation_height"
+                        android:layout_marginTop="@dimen/loading_animation_top_margin"
+                        android:scaleX="1.3"
+                        android:scaleY="1.3"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/loading_animation" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/content_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/inner_padding"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/you_got"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="@dimen/quiz_result_earned_coins_label_text_size" />
+
+                    <LinearLayout
+                        android:id="@+id/earned_coins_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:id="@+id/earned_coins"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/gray_text_color"
+                            android:textSize="@dimen/quiz_result_earned_coins_text_size"
+                            android:textStyle="bold"
+                            tools:text="1000" />
+
+                        <ImageView
+                            android:layout_width="@dimen/quiz_result_coins_icon_size"
+                            android:layout_height="@dimen/quiz_result_coins_icon_size"
+                            android:layout_marginStart="@dimen/icon_coins_margin_start"
+                            android:contentDescription="@string/icon_coins_content_description"
+                            android:src="@drawable/icon_coins" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/double_coins_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/button_margin_between"
+                        android:backgroundTint="@color/second_btn_color"
+                        android:elevation="@dimen/button_elevation"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minHeight="0dp"
+                        android:paddingHorizontal="@dimen/button_padding_horizontal"
+                        android:paddingVertical="@dimen/button_padding_vertical"
+                        android:stateListAnimator="@null"
+                        android:text="@string/double_coins"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/second_btn_text_color"
+                        android:textSize="@dimen/button_text_size"
+                        android:visibility="gone"
+                        app:cornerRadius="@dimen/button_corner_radius"
+                        app:rippleColor="@color/second_btn_ripple_color" />
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_height"
+                        android:layout_marginTop="@dimen/line_top_margin"
+                        android:layout_marginBottom="@dimen/line_bottom_margin"
+                        android:background="@color/line_color" />
+
+                    <TextView
+                        android:id="@+id/congratulation_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/congratulation_tv_bottom_margin"
+                        android:gravity="center"
+                        android:textColor="@color/accent_text_color"
+                        android:textSize="@dimen/congratulation_text_size"
+                        android:textStyle="bold" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/congratulation_animation"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/congratulation_animation_size"
+                        android:layout_marginBottom="@dimen/congratulation_animation_bottom_margin"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/continue_quiz_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/btn_background"
+                        android:elevation="@dimen/button_elevation"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minHeight="0dp"
+                        android:paddingHorizontal="@dimen/button_padding_horizontal"
+                        android:paddingVertical="@dimen/button_padding_vertical"
+                        android:stateListAnimator="@null"
+                        android:text="@string/continue_quiz"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/black_text_color"
+                        android:textSize="@dimen/button_text_size"
+                        app:cornerRadius="@dimen/button_corner_radius"
+                        app:rippleColor="@color/btn_ripple_color"
+                        app:strokeColor="@color/btn_stroke_color"
+                        app:strokeWidth="@dimen/button_stroke_width" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/to_levels_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/button_margin_between"
+                        android:backgroundTint="@color/btn_background"
+                        android:elevation="@dimen/button_elevation"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minHeight="0dp"
+                        android:paddingHorizontal="@dimen/button_padding_horizontal"
+                        android:paddingVertical="@dimen/button_padding_vertical"
+                        android:stateListAnimator="@null"
+                        android:text="@string/to_level_selection"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/black_text_color"
+                        android:textSize="@dimen/button_text_size"
+                        app:cornerRadius="@dimen/button_corner_radius"
+                        app:rippleColor="@color/btn_ripple_color"
+                        app:strokeColor="@color/btn_stroke_color"
+                        app:strokeWidth="@dimen/button_stroke_width" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.yandex.mobile.ads.banner.BannerAdView
+        android:id="@+id/banner_ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

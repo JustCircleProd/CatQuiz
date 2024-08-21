@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".quiz.presentation.QuizActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/screen_with_banner_ad_root_layout_bottom_margin">
+
+            <TextView
+                android:id="@+id/brand_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/screen_content_space_size"
+                android:layout_marginTop="@dimen/screen_content_space_size"
+                android:layout_marginBottom="@dimen/brand_text_margin_bottom"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/brand_text_color"
+                android:textSize="@dimen/brand_text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/root_cardview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/root_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/screen_content_space_size"
+                app:cardBackgroundColor="@color/card_background"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/brand_label">
+
+                <LinearLayout
+                    android:id="@+id/loading_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/inner_padding"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/tv_loading_result_text"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="@dimen/hint_text_size" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/loading_animation_height"
+                        android:layout_marginTop="@dimen/loading_animation_top_margin"
+                        android:scaleX="1.3"
+                        android:scaleY="1.3"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/loading_animation" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/out_of_questions_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/inner_padding"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/tv_out_of_questions_hint_text"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="@dimen/hint_text_size" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/to_levels_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/button_margin_between"
+                        android:backgroundTint="@color/white"
+                        android:elevation="@dimen/button_elevation"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minHeight="0dp"
+                        android:paddingHorizontal="@dimen/button_padding_horizontal"
+                        android:paddingVertical="@dimen/button_padding_vertical"
+                        android:stateListAnimator="@null"
+                        android:text="@string/to_level_selection"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/button_text_size"
+                        app:cornerRadius="@dimen/button_corner_radius"
+                        app:rippleColor="@color/btn_ripple_color"
+                        app:strokeColor="@color/btn_stroke_color"
+                        app:strokeWidth="@dimen/button_stroke_width" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/content_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:padding="@dimen/inner_padding"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/question_worth_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toStartOf="@id/user_coins_quantity_layout"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:id="@+id/question_worth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gray_text_color"
+                            android:textSize="@dimen/quiz_coins_tv_text_size"
+                            tools:text="@string/quiz_question_worth_label" />
+
+                        <ImageView
+                            android:layout_width="@dimen/quiz_coins_icon_size"
+                            android:layout_height="@dimen/quiz_coins_icon_size"
+                            android:layout_marginStart="@dimen/icon_coins_margin_start"
+                            android:contentDescription="@string/icon_coins_content_description"
+                            android:src="@drawable/icon_coins" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/user_coins_quantity_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/question_worth_layout"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:id="@+id/user_coins_quantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gray_text_color"
+                            android:textSize="@dimen/quiz_coins_tv_text_size"
+                            tools:text="@string/quiz_users_coins_quantity" />
+
+                        <ImageView
+                            android:layout_width="@dimen/quiz_coins_icon_size"
+                            android:layout_height="@dimen/quiz_coins_icon_size"
+                            android:layout_marginStart="@dimen/icon_coins_margin_start"
+                            android:contentDescription="@string/icon_coins_content_description"
+                            android:src="@drawable/icon_coins" />
+
+                    </LinearLayout>
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/coins_barrier"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="bottom"
+                        app:constraint_referenced_ids="question_worth_layout,user_coins_quantity_layout" />
+
+                    <TextView
+                        android:id="@+id/text_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/question_top_margin"
+                        android:layout_marginBottom="@dimen/question_bottom_margin"
+                        android:gravity="center"
+                        android:minHeight="@dimen/question_height"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="@dimen/text_question_text_size"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toTopOf="@id/quiz_progress"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/coins_barrier" />
+
+                    <ImageView
+                        android:id="@+id/image_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/question_height"
+                        android:layout_marginTop="@dimen/question_top_margin"
+                        android:layout_marginBottom="@dimen/question_bottom_margin"
+                        android:contentDescription="@string/image_for_question_description"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toTopOf="@id/quiz_progress"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/coins_barrier"
+                        tools:src="@tools:sample/avatars" />
+
+                    <FrameLayout
+                        android:id="@+id/video_question_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/question_top_margin"
+                        android:layout_marginBottom="@dimen/question_bottom_margin"
+                        android:background="@drawable/video_question_rounded_corners"
+                        android:outlineProvider="background"
+                        android:visibility="invisible"
+                        app:layout_constrainedHeight="true"
+                        app:layout_constrainedWidth="true"
+                        app:layout_constraintBottom_toTopOf="@id/quiz_progress"
+                        app:layout_constraintDimensionRatio="16:9"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_max="@dimen/question_height"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/coins_barrier"
+                        app:layout_constraintWidth_max="@dimen/video_question_width">
+
+                        <VideoView
+                            android:id="@+id/video_question"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/video_for_question_description" />
+
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/audio_question"
+                        android:layout_width="@dimen/audio_question_size"
+                        android:layout_height="@dimen/audio_question_size"
+                        android:layout_marginTop="@dimen/question_top_margin"
+                        android:layout_marginBottom="@dimen/question_bottom_margin"
+                        android:contentDescription="@string/audio_question_content_description"
+                        android:src="@drawable/icon_audio_question"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toTopOf="@id/quiz_progress"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/coins_barrier" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/quiz_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/quiz_progress_indicator_margin_bottom"
+                        android:indeterminate="false"
+                        android:progress="0"
+                        app:indicatorColor="@color/progress_indicator_color"
+                        app:layout_constraintBottom_toTopOf="@id/option_buttons_layout"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:trackColor="@color/progress_track_color"
+                        app:trackCornerRadius="@dimen/quiz_progress_indicator_corner_radius"
+                        app:trackThickness="@dimen/quiz_progress_indicator_thickness" />
+
+                    <LinearLayout
+                        android:id="@+id/option_buttons_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toTopOf="@id/hint_divider"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/first_option"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/button_margin_between"
+                            android:backgroundTint="@color/btn_background"
+                            android:elevation="@dimen/button_elevation"
+                            android:enabled="false"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:minHeight="0dp"
+                            android:paddingHorizontal="@dimen/button_padding_horizontal"
+                            android:paddingVertical="@dimen/button_padding_vertical"
+                            android:stateListAnimator="@null"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/button_text_size"
+                            app:cornerRadius="@dimen/button_corner_radius"
+                            app:rippleColor="@color/btn_ripple_color"
+                            app:strokeColor="@color/btn_stroke_color"
+                            app:strokeWidth="@dimen/button_stroke_width" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/second_option"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/button_margin_between"
+                            android:backgroundTint="@color/btn_background"
+                            android:elevation="@dimen/button_elevation"
+                            android:enabled="false"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:minHeight="0dp"
+                            android:paddingHorizontal="@dimen/button_padding_horizontal"
+                            android:paddingVertical="@dimen/button_padding_vertical"
+                            android:stateListAnimator="@null"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/button_text_size"
+                            app:cornerRadius="@dimen/button_corner_radius"
+                            app:rippleColor="@color/btn_ripple_color"
+                            app:strokeColor="@color/btn_stroke_color"
+                            app:strokeWidth="@dimen/button_stroke_width" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/third_option"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/button_margin_between"
+                            android:backgroundTint="@color/btn_background"
+                            android:elevation="@dimen/button_elevation"
+                            android:enabled="false"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:minHeight="0dp"
+                            android:paddingHorizontal="@dimen/button_padding_horizontal"
+                            android:paddingVertical="@dimen/button_padding_vertical"
+                            android:stateListAnimator="@null"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/button_text_size"
+                            app:cornerRadius="@dimen/button_corner_radius"
+                            app:rippleColor="@color/btn_ripple_color"
+                            app:strokeColor="@color/btn_stroke_color"
+                            app:strokeWidth="@dimen/button_stroke_width" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/fourth_option"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@color/btn_background"
+                            android:elevation="@dimen/button_elevation"
+                            android:enabled="false"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:minHeight="0dp"
+                            android:paddingHorizontal="@dimen/button_padding_horizontal"
+                            android:paddingVertical="@dimen/button_padding_vertical"
+                            android:stateListAnimator="@null"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="@dimen/button_text_size"
+                            app:cornerRadius="@dimen/button_corner_radius"
+                            app:rippleColor="@color/btn_ripple_color"
+                            app:strokeColor="@color/btn_stroke_color"
+                            app:strokeWidth="@dimen/button_stroke_width" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/hint_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/quiz_hint_divider_margin_bottom"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/quiz_hint_divider_padding_top"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@id/hint_50_50"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/line_height"
+                            android:layout_weight="1"
+                            android:background="@color/line_color" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/quiz_divider_tv_horizontal_margin"
+                            android:text="@string/hints"
+                            android:textColor="@color/gray_text_color"
+                            android:textSize="@dimen/quiz_hint_divider_title_text_size" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/line_height"
+                            android:layout_weight="1"
+                            android:background="@color/line_color" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/hint_50_50"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/raw_buttons_horizontal_margin"
+                        android:backgroundTint="@color/second_btn_color"
+                        android:clickable="true"
+                        android:elevation="@dimen/button_elevation"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        app:cardCornerRadius="@dimen/button_corner_radius"
+                        app:cardElevation="@dimen/button_elevation"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/hint_correct_answer"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:rippleColor="@color/second_btn_ripple_color">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/quiz_hint_card_padding"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <TextView
+                                android:id="@+id/hint_50_50_title"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:text="@string/remove_2_options"
+                                android:textAlignment="center"
+                                android:textColor="@color/second_btn_text_color"
+                                android:textSize="@dimen/quiz_hint_button_text_size"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/hint_50_50_title"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <TextView
+                                    android:id="@+id/hint_50_50_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/second_btn_text_color"
+                                    android:textSize="@dimen/quiz_hint_button_text_size"
+                                    tools:text="50" />
+
+                                <ImageView
+                                    android:id="@+id/hint_50_50_price_icon"
+                                    android:layout_width="@dimen/quiz_hint_icon_coins_size"
+                                    android:layout_height="@dimen/quiz_hint_icon_coins_size"
+                                    android:layout_marginStart="@dimen/icon_coins_margin_start"
+                                    android:contentDescription="@string/icon_coins_content_description"
+                                    android:src="@drawable/icon_coins" />
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/hint_correct_answer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/raw_buttons_horizontal_margin"
+                        android:backgroundTint="@color/second_btn_color"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone"
+                        app:cardCornerRadius="@dimen/button_corner_radius"
+                        app:cardElevation="@dimen/button_elevation"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/hint_50_50"
+                        app:rippleColor="@color/second_btn_ripple_color">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/quiz_hint_card_padding"
+                            tools:ignore="UseCompoundDrawables">
+
+                            <TextView
+                                android:id="@+id/hint_correct_answer_title"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:text="@string/right_answer"
+                                android:textAlignment="center"
+                                android:textColor="@color/second_btn_text_color"
+                                android:textSize="@dimen/quiz_hint_button_text_size"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/hint_correct_answer_title"
+                                tools:ignore="UseCompoundDrawables">
+
+                                <TextView
+                                    android:id="@+id/hint_correct_answer_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/second_btn_text_color"
+                                    android:textSize="@dimen/quiz_hint_button_text_size"
+                                    tools:text="100" />
+
+                                <ImageView
+                                    android:id="@+id/hint_correct_answer_price_icon"
+                                    android:layout_width="@dimen/quiz_hint_icon_coins_size"
+                                    android:layout_height="@dimen/quiz_hint_icon_coins_size"
+                                    android:layout_marginStart="@dimen/icon_coins_margin_start"
+                                    android:contentDescription="@string/icon_coins_content_description"
+                                    android:src="@drawable/icon_coins" />
+
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.yandex.mobile.ads.banner.BannerAdView
+        android:id="@+id/banner_ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

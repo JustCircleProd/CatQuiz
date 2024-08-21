@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="690"
+    android:viewportHeight="690">
+    <group
+        android:translateX="-135"
+        android:translateY="-105">
+        <path
+            android:fillColor="@color/coins_icon_color"
+            android:pathData="M481,441q132,0 220,-40t88,-94q0,-55 -88,-94.5T481,173q-132,0 -220.5,39.5T172,307q0,54 88.5,94T481,441ZM480,491q53,0 100.5,-7.5T668,462q40,-14 70.5,-33.5T789,386v124q-20,23 -50.5,42.5T668,586q-40,14 -87.5,21.5T480,615q-53,0 -100.5,-7.5t-87,-21.5q-39.5,-14 -70,-33.5T172,510v-124q20,23 50.5,42.5t70,33.5q39.5,14 87,21.5T480,491ZM480,665q53,0 100.5,-7.5T668,636q40,-14 70.5,-33.5T789,560v123q-20,23 -50.5,42.5T668,759q-40,14 -87.5,21.5T480,788q-53,0 -100.5,-7.5t-87,-21.5q-39.5,-14 -70,-33.5T172,683v-123q20,23 50.5,42.5t70,33.5q39.5,14 87,21.5T480,665Z" />
+    </group>
+</vector>

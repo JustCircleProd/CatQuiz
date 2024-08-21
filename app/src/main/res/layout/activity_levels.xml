@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".levels.presentation.LevelsActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/root_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/screen_with_banner_ad_root_layout_bottom_margin">
+
+            <TextView
+                android:id="@+id/brand_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/screen_content_space_size"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/brand_text_color"
+                android:textSize="@dimen/brand_text_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/back_btn"
+                app:layout_constraintEnd_toEndOf="@id/root_cardview"
+                app:layout_constraintStart_toStartOf="@id/root_cardview"
+                app:layout_constraintTop_toTopOf="@id/back_btn" />
+
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="@dimen/back_icon_button_size"
+                android:layout_height="@dimen/back_icon_button_size"
+                android:layout_marginTop="@dimen/screen_content_space_size"
+                android:layout_marginBottom="@dimen/brand_text_with_back_button_margin_bottom"
+                android:background="@drawable/back_button_ripple_effect"
+                android:contentDescription="@string/back"
+                android:src="@drawable/icon_back"
+                app:layout_constraintBottom_toTopOf="@id/root_cardview"
+                app:layout_constraintEnd_toStartOf="@id/brand_label"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@id/root_cardview"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/root_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/screen_content_space_size"
+                app:cardBackgroundColor="@color/card_background"
+                app:cardCornerRadius="@dimen/card_corner_radius"
+                app:cardElevation="@dimen/card_elevation"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/back_btn">
+
+                <LinearLayout
+                    android:id="@+id/content_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:padding="@dimen/inner_padding">
+
+                    <LinearLayout
+                        android:id="@+id/user_coins_quantity_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:id="@+id/user_coins_quantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textColor="@color/gray_text_color"
+                            android:textSize="@dimen/levels_user_coins_text_size"
+                            tools:text="@string/levels_users_coins_quantity" />
+
+                        <ImageView
+                            android:layout_width="@dimen/levels_user_coins_icon_size"
+                            android:layout_height="@dimen/levels_user_coins_icon_size"
+                            android:layout_marginStart="@dimen/icon_coins_margin_start"
+                            android:contentDescription="@string/icon_coins_content_description"
+                            android:src="@drawable/icon_coins" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_height"
+                        android:layout_marginBottom="@dimen/line_bottom_margin"
+                        android:background="@color/line_color"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/levels_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.yandex.mobile.ads.banner.BannerAdView
+        android:id="@+id/banner_ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

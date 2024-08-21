@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".main.presentation.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/brand_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/screen_content_space_size"
+            android:layout_marginTop="@dimen/screen_content_space_size"
+            android:layout_marginBottom="@dimen/brand_text_margin_bottom"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/brand_text_color"
+            android:textSize="@dimen/brand_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/root_cardview"
+            app:layout_constraintEnd_toEndOf="@id/root_cardview"
+            app:layout_constraintStart_toStartOf="@id/root_cardview"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/root_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/screen_content_space_size"
+            android:layout_marginBottom="@dimen/screen_content_space_size"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:cardElevation="@dimen/card_elevation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/brand_label">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/inner_padding">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/play_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/button_margin_between"
+                    android:backgroundTint="@color/btn_background"
+                    android:elevation="@dimen/button_elevation"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:minHeight="0dp"
+                    android:paddingHorizontal="@dimen/button_padding_horizontal"
+                    android:paddingVertical="@dimen/button_padding_vertical"
+                    android:stateListAnimator="@null"
+                    android:text="@string/play"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/black_text_color"
+                    android:textSize="@dimen/button_text_size"
+                    app:cornerRadius="@dimen/button_corner_radius"
+                    app:rippleColor="@color/btn_ripple_color"
+                    app:strokeColor="@color/btn_stroke_color"
+                    app:strokeWidth="@dimen/button_stroke_width" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/settings_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/btn_background"
+                    android:elevation="@dimen/button_elevation"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:minHeight="0dp"
+                    android:paddingHorizontal="@dimen/button_padding_horizontal"
+                    android:paddingVertical="@dimen/button_padding_vertical"
+                    android:stateListAnimator="@null"
+                    android:text="@string/settings"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/black_text_color"
+                    android:textSize="@dimen/button_text_size"
+                    app:cornerRadius="@dimen/button_corner_radius"
+                    app:rippleColor="@color/btn_ripple_color"
+                    app:strokeColor="@color/btn_stroke_color"
+                    app:strokeWidth="@dimen/button_stroke_width" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
