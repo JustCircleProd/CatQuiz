@@ -33,7 +33,7 @@
 
     <dimen name="raw_buttons_horizontal_margin">4dp</dimen>
 
-    <dimen name="loading_animation_height">150dp</dimen>
+    <dimen name="loading_animation_height">160dp</dimen>
     <dimen name="loading_animation_top_margin">10dp</dimen>
 
     <dimen name="icon_coins_margin_start">1dp</dimen>
@@ -130,7 +130,7 @@
     <dimen name="quiz_coins_tv_text_size">14sp</dimen>
     <dimen name="quiz_coins_icon_size">14dp</dimen>
 
-    <dimen name="question_height">150dp</dimen>
+    <dimen name="question_height">160dp</dimen>
 
     <dimen name="text_question_text_size">19sp</dimen>
 
