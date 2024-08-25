@@ -1456,8 +1456,8 @@
 
     <string name="level_7_question_19">На какой частоте мурлыкают кошки?</string>
     <string name="level_7_question_19_first_option">20–30 Гц</string>
-    <string name="level_7_question_19_second_option">50–60 Гц Гц</string>
-    <string name="level_7_question_19_third_option">90–-100 Гц</string>
+    <string name="level_7_question_19_second_option">50–60 Гц</string>
+    <string name="level_7_question_19_third_option">90–100 Гц</string>
     <string name="level_7_question_19_fourth_option">240–250 Гц</string>
 
     <string name="level_7_question_20">Когда, по предположению Гарвардского университета, была сделана первая фотография кота?</string>

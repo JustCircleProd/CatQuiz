@@ -205,6 +205,7 @@ class QuizResultActivity : AppCompatActivity(), DoubleCoinsConfirmationDialogCal
             if (!viewModel.isFirstLoadResultShown) {
                 binding.loadingLayout.hideWithAnimation(
                     onComplete = {
+                        viewModel.isFirstLoadResultShown = true
                         binding.contentLayout.visibility = View.VISIBLE
                     }
                 )
@@ -298,6 +299,15 @@ class QuizResultActivity : AppCompatActivity(), DoubleCoinsConfirmationDialogCal
     }
 
     private fun showResult() {
+        if (viewModel.isCongratulationViewsShown) {
+            binding.congratulationText.text =
+                resources.getStringArray(viewModel.shownCongratulationTextArrayResId!!)[viewModel.shownCongratulationTextArrayIndex!!]
+
+            binding.congratulationAnimation.setAnimation(viewModel.shownCongratulationAnimationRawResId!!)
+
+            return
+        }
+
         val correctlyAnsweredQuestionsCount =
             intent.extras!!.getInt(CORRECTLY_ANSWERED_QUESTIONS_COUNT_ARGUMENT_NAME)
 
@@ -324,50 +334,70 @@ class QuizResultActivity : AppCompatActivity(), DoubleCoinsConfirmationDialogCal
                 onBadResult()
             }
         }
+
+        viewModel.isCongratulationViewsShown = true
     }
 
     private fun onBestResult() {
-        binding.congratulationText.text =
-            resources.getStringArray(R.array.texts_for_best_result).toList().shuffled()[0]
+        viewModel.shownCongratulationTextArrayResId = R.array.texts_for_best_result
 
-        val animationResource = listOf(
+        val stringArray = resources.getStringArray(viewModel.shownCongratulationTextArrayResId!!)
+
+        viewModel.shownCongratulationTextArrayIndex =
+            (0 until stringArray.toList().size).shuffled()[0]
+
+        binding.congratulationText.text = stringArray[viewModel.shownCongratulationTextArrayIndex!!]
+
+        viewModel.shownCongratulationAnimationRawResId = listOf(
             R.raw.quiz_result_best_congratulation_animation_1,
             R.raw.introduction_card_item_animation_3_and_quiz_result_best_congratulation_animation_2,
             R.raw.quiz_result_best_congratulation_animation_3
         ).shuffled().first()
 
-        binding.congratulationAnimation.setAnimation(animationResource)
+        binding.congratulationAnimation.setAnimation(viewModel.shownCongratulationAnimationRawResId!!)
 
         startResultPlayer(R.raw.quiz_result_best_sound)
     }
 
     private fun onGoodResult() {
-        binding.congratulationText.text =
-            resources.getStringArray(R.array.texts_for_good_result).toList().shuffled()[0]
+        viewModel.shownCongratulationTextArrayResId = R.array.texts_for_good_result
 
-        val animationResource = listOf(
+        val stringArray = resources.getStringArray(viewModel.shownCongratulationTextArrayResId!!)
+
+        viewModel.shownCongratulationTextArrayIndex =
+            (0 until stringArray.toList().size).shuffled()[0]
+
+        binding.congratulationText.text = stringArray[viewModel.shownCongratulationTextArrayIndex!!]
+
+        viewModel.shownCongratulationAnimationRawResId = listOf(
             R.raw.quiz_result_good_congratulation_animation_1,
             R.raw.quiz_result_good_congratulation_animation_2,
             R.raw.introduction_card_item_animation_4_and_quiz_result_good_congratulation_animation_3
 
         ).shuffled().first()
 
-        binding.congratulationAnimation.setAnimation(animationResource)
+        binding.congratulationAnimation.setAnimation(viewModel.shownCongratulationAnimationRawResId!!)
 
         startResultPlayer(R.raw.quiz_result_good_sound)
     }
 
     private fun onBadResult() {
-        binding.congratulationText.text =
-            resources.getStringArray(R.array.texts_for_bad_result).toList().shuffled()[0]
+        viewModel.shownCongratulationTextArrayResId = R.array.texts_for_bad_result
 
-        val animationResource = listOf(
+        val stringArray = resources.getStringArray(viewModel.shownCongratulationTextArrayResId!!)
+
+        viewModel.shownCongratulationTextArrayIndex =
+            (0 until stringArray.toList().size).shuffled()[0]
+
+        binding.congratulationText.text = stringArray[viewModel.shownCongratulationTextArrayIndex!!]
+
+        viewModel.shownCongratulationAnimationRawResId = listOf(
             R.raw.quiz_result_bad_congratulation_animation_1,
             R.raw.quiz_result_bad_congratulation_animation_2,
             R.raw.quiz_result_bad_congratulation_animation_3
         ).shuffled().first()
 
-        binding.congratulationAnimation.setAnimation(animationResource)
+        binding.congratulationAnimation.setAnimation(viewModel.shownCongratulationAnimationRawResId!!)
 
         startResultPlayer(R.raw.quiz_result_bad_sound)
     }
@@ -403,26 +433,27 @@ class QuizResultActivity : AppCompatActivity(), DoubleCoinsConfirmationDialogCal
         viewModel.areEarnedCoinsDoubled.observe(this) {
             if (it || viewModel.earnedCoins.value == 0) {
                 binding.doubleCoinsBtn.visibility = View.GONE
-                changeLineTopMargin(removeTopMargin = true)
+                changeLineTopMargin(isTextAbove = true)
             } else {
                 binding.doubleCoinsBtn.visibility = View.VISIBLE
-                changeLineTopMargin(removeTopMargin = false)
+                changeLineTopMargin(isTextAbove = false)
             }
         }
     }
 
-    private fun changeLineTopMargin(removeTopMargin: Boolean) {
+    private fun changeLineTopMargin(isTextAbove: Boolean) {
         if (binding.line.layoutParams is ViewGroup.MarginLayoutParams) {
             val layoutParams = binding.line.layoutParams as ViewGroup.MarginLayoutParams
-            val bottomMargin = resources.getDimension(R.dimen.line_bottom_margin).roundToInt()
+            val bottomMargin =
+                resources.getDimension(R.dimen.line_with_text_under_bottom_margin).roundToInt()
 
-            if (removeTopMargin) {
-                layoutParams.setMargins(0, 0, 0, bottomMargin)
+            val topMargin = if (isTextAbove) {
+                0
             } else {
-                val topMargin = resources.getDimension(R.dimen.line_top_margin).roundToInt()
-                layoutParams.setMargins(0, topMargin, 0, bottomMargin)
+                resources.getDimension(R.dimen.default_line_top_margin).roundToInt()
             }
 
+            layoutParams.setMargins(0, topMargin, 0, bottomMargin)
             binding.line.requestLayout()
         }
     }

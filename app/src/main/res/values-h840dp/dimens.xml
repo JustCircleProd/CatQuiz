@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="developers_licenses_content_height">700dp</dimen>
-
     <dimen name="question_height">300dp</dimen>
 
     <dimen name="audio_question_size">165dp</dimen>

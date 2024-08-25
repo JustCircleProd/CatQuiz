@@ -108,7 +108,8 @@
                         android:id="@+id/line"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/line_height"
-                        android:layout_marginBottom="@dimen/line_bottom_margin"
+                        android:layout_marginTop="@dimen/levels_user_coins_underline_top_margin"
+                        android:layout_marginBottom="@dimen/default_line_bottom_margin"
                         android:background="@color/line_color"
                         android:visibility="gone" />
 

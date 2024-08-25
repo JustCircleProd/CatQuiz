@@ -37,6 +37,7 @@
     <color name="lower_gradient_color">#F5A766</color>
 
     <color name="accent_text_color">#E48A76</color>
+    <color name="accent_text_color_ripple_color">#99E48A76</color>
 
     <color name="progress_indicator_color">#F4B58F</color>
     <color name="progress_track_color">#F9E3D2</color>

@@ -154,8 +154,8 @@
                         android:id="@+id/line"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/line_height"
-                        android:layout_marginTop="@dimen/line_top_margin"
-                        android:layout_marginBottom="@dimen/line_bottom_margin"
+                        android:layout_marginTop="@dimen/default_line_top_margin"
+                        android:layout_marginBottom="@dimen/line_with_text_under_bottom_margin"
                         android:background="@color/line_color" />
 
                     <TextView
