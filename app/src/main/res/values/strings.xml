@@ -210,7 +210,7 @@
     <string name="level_1_question_6_third_option">Девон-рекс</string>
     <string name="level_1_question_6_fourth_option">Фолдекс</string>
 
-    <string name="level_1_question_7_first_option">Японский бобтейл</string>
+    <string name="level_1_question_7_first_option">Норвежская лесная</string>
     <string name="level_1_question_7_second_option">Ориентальная</string>
     <string name="level_1_question_7_third_option">Сиамская</string>
     <string name="level_1_question_7_fourth_option">Манчкин длинношёрстный</string>
@@ -279,6 +279,46 @@
     <string name="level_1_question_18_second_option">Наличие подушечек</string>
     <string name="level_1_question_18_third_option">Способность втягивать когти</string>
     <string name="level_1_question_18_fourth_option">Особое расположение нервных окончаний</string>
+
+    <string name="level_1_question_19_first_option">Домашняя короткошёрстная</string>
+    <string name="level_1_question_19_second_option">Британская короткошёрстная</string>
+    <string name="level_1_question_19_third_option">Американский кёрл</string>
+    <string name="level_1_question_19_fourth_option">Ламбкин</string>
+
+    <string name="level_1_question_20_first_option">Кинкалоу</string>
+    <string name="level_1_question_20_second_option">Британская короткошёрстная</string>
+    <string name="level_1_question_20_third_option">Балинезийская</string>
+    <string name="level_1_question_20_fourth_option">Украинский левкой</string>
+
+    <string name="level_1_question_21_first_option">Донской сфинкс</string>
+    <string name="level_1_question_21_second_option">Экзотическая короткошёрстная</string>
+    <string name="level_1_question_21_third_option">Шотландская вислоухая</string>
+    <string name="level_1_question_21_fourth_option">Гималайская</string>
+
+    <string name="level_1_question_22_first_option">Русская голубая</string>
+    <string name="level_1_question_22_second_option">Петерболд</string>
+    <string name="level_1_question_22_third_option">Турецкая ангора</string>
+    <string name="level_1_question_22_fourth_option">Сибирская</string>
+
+    <string name="level_1_question_23_first_option">Персидская</string>
+    <string name="level_1_question_23_second_option">Британская короткошёрстная</string>
+    <string name="level_1_question_23_third_option">Тонкинская</string>
+    <string name="level_1_question_23_fourth_option">Сфинкс</string>
+
+    <string name="level_1_question_24_first_option">Мэнкс</string>
+    <string name="level_1_question_24_second_option">Мейн-кун</string>
+    <string name="level_1_question_24_third_option">Американская короткошёрстная</string>
+    <string name="level_1_question_24_fourth_option">Турецкий ван</string>
+
+    <string name="level_1_question_25_first_option">Охос азулес</string>
+    <string name="level_1_question_25_second_option">Египетский мау</string>
+    <string name="level_1_question_25_third_option">Сиамская</string>
+    <string name="level_1_question_25_fourth_option">Мейн-кун</string>
+
+    <string name="level_1_question_26_first_option">Курильский бобтейл</string>
+    <string name="level_1_question_26_second_option">Корниш-рекс</string>
+    <string name="level_1_question_26_third_option">Той-боб</string>
+    <string name="level_1_question_26_fourth_option">Русская голубая</string>
 
 
     <!-- Level 2 -->
@@ -372,7 +412,7 @@
     <string name="level_2_question_17">Какой особенностью обладают кошачьи когти?</string>
     <string name="level_2_question_17_first_option">Изогнуты вниз</string>
     <string name="level_2_question_17_second_option">Светятся в темноте</string>
-    <string name="level_2_question_17_third_option">Постоянно растут</string>
+    <string name="level_2_question_17_third_option">Растут не всю жизнь</string>
     <string name="level_2_question_17_fourth_option">Меняют цвет</string>
 
     <string name="level_2_question_18">Какое поведение кошки может указывать на то, что она считает человека частью своей семьи?</string>
@@ -423,6 +463,56 @@
     <string name="level_2_question_25_third_option">Царапание</string>
     <string name="level_2_question_25_fourth_option">Встать на задние лапы</string>
 
+    <string name="level_2_question_26_first_option">Сфинкс</string>
+    <string name="level_2_question_26_second_option">Ориентальная</string>
+    <string name="level_2_question_26_third_option">Девон-рекс</string>
+    <string name="level_2_question_26_fourth_option">Канаани</string>
+
+    <string name="level_2_question_27_first_option">Шантильи тиффани</string>
+    <string name="level_2_question_27_second_option">Экзотическая короткошёрстная</string>
+    <string name="level_2_question_27_third_option">Русская голубая</string>
+    <string name="level_2_question_27_fourth_option">Серенгети</string>
+
+    <string name="level_2_question_28_first_option">Рэгдолл</string>
+    <string name="level_2_question_28_second_option">Персидская</string>
+    <string name="level_2_question_28_third_option">Бенгальская</string>
+    <string name="level_2_question_28_fourth_option">Наполеон</string>
+
+    <string name="level_2_question_29_first_option">Бенгальская</string>
+    <string name="level_2_question_29_second_option">Лаперм</string>
+    <string name="level_2_question_29_third_option">Бомбейская</string>
+    <string name="level_2_question_29_fourth_option">Невская маскарадная</string>
+
+    <string name="level_2_question_30_first_option">Курильский бобтейл</string>
+    <string name="level_2_question_30_second_option">Бирманская</string>
+    <string name="level_2_question_30_third_option">Невская маскарадная</string>
+    <string name="level_2_question_30_fourth_option">Домашняя короткошёрстная</string>
+
+    <string name="level_2_question_31_first_option">Бенгальская</string>
+    <string name="level_2_question_31_second_option">Бирманская</string>
+    <string name="level_2_question_31_third_option">Сомалийская</string>
+    <string name="level_2_question_31_fourth_option">Сибирская</string>
+
+    <string name="level_2_question_32_first_option">Немецкий рекс</string>
+    <string name="level_2_question_32_second_option">Азиатская</string>
+    <string name="level_2_question_32_third_option">Ориентальная</string>
+    <string name="level_2_question_32_fourth_option">Американский Рингтейл</string>
+
+    <string name="level_2_question_33_first_option">Яванез</string>
+    <string name="level_2_question_33_second_option">Оцикет</string>
+    <string name="level_2_question_33_third_option">Курильский бобтейл</string>
+    <string name="level_2_question_33_fourth_option">Рэгдолл</string>
+
+    <string name="level_2_question_34_first_option">Абиссинская</string>
+    <string name="level_2_question_34_second_option">Аравийский мау</string>
+    <string name="level_2_question_34_third_option">Скукум</string>
+    <string name="level_2_question_34_fourth_option">Минскин</string>
+
+    <string name="level_2_question_35_first_option">Гигантская Афродита</string>
+    <string name="level_2_question_35_second_option">Норвежская лесная</string>
+    <string name="level_2_question_35_third_option">Турецкий ван</string>
+    <string name="level_2_question_35_fourth_option">Цейлонская</string>
+
 
     <!-- Level 3 -->
 
@@ -447,7 +537,7 @@
     <string name="level_3_question_4_fourth_option">Девон-рекс</string>
 
     <string name="level_3_question_5_first_option">Шотландская прямоухая</string>
-    <string name="level_3_question_5_second_option">Рэгдолл</string>
+    <string name="level_3_question_5_second_option">Девон-рекс</string>
     <string name="level_3_question_5_third_option">Курильский бобтейл</string>
     <string name="level_3_question_5_fourth_option">Сомалийская</string>
 
@@ -540,10 +630,10 @@
     <string name="level_3_question_21_fourth_option">На страх</string>
 
     <string name="level_3_question_22">Какие мышцы участвуют в создании мурлыканья у кошек?</string>
-    <string name="level_3_question_22_first_option">Гортанные мышцы</string>
-    <string name="level_3_question_22_second_option">Грудные мышцы</string>
-    <string name="level_3_question_22_third_option">Брюшные мышцы</string>
-    <string name="level_3_question_22_fourth_option">Языковые мышцы</string>
+    <string name="level_3_question_22_first_option">Гортанные</string>
+    <string name="level_3_question_22_second_option">Грудные</string>
+    <string name="level_3_question_22_third_option">Брюшные</string>
+    <string name="level_3_question_22_fourth_option">Языковые</string>
 
     <string name="level_3_question_23">Какое чувство у кошек развито хуже, чем у людей?</string>
     <string name="level_3_question_23_first_option">Обоняние</string>
@@ -617,6 +707,71 @@
     <string name="level_3_question_34_third_option">O (Orange)</string>
     <string name="level_3_question_34_fourth_option">b (Brown)</string>
 
+    <string name="level_3_question_35_first_option">Манчкин</string>
+    <string name="level_3_question_35_second_option">Нибелунг</string>
+    <string name="level_3_question_35_third_option">Канаани</string>
+    <string name="level_3_question_35_fourth_option">Мандалай</string>
+
+    <string name="level_3_question_36_first_option">Корат</string>
+    <string name="level_3_question_36_second_option">Американская короткошёрстная</string>
+    <string name="level_3_question_36_third_option">Селкирк-рекс</string>
+    <string name="level_3_question_36_fourth_option">Сококе</string>
+
+    <string name="level_3_question_37_first_option">Американская жесткошёрстная</string>
+    <string name="level_3_question_37_second_option">Тайская</string>
+    <string name="level_3_question_37_third_option">Корниш-рекс</string>
+    <string name="level_3_question_37_fourth_option">Фолдекс</string>
+
+    <string name="level_3_question_38_first_option">Шотландская вислоухая</string>
+    <string name="level_3_question_38_second_option">Пиксибоб</string>
+    <string name="level_3_question_38_third_option">Сиамская</string>
+    <string name="level_3_question_38_fourth_option">Девон-рекс</string>
+
+    <string name="level_3_question_39_first_option">Шотландская прямоухая</string>
+    <string name="level_3_question_39_second_option">Сноу-шу</string>
+    <string name="level_3_question_39_third_option">Уральский рекс</string>
+    <string name="level_3_question_39_fourth_option">Хайлендер</string>
+
+    <string name="level_3_question_40_first_option">Кимрик</string>
+    <string name="level_3_question_40_second_option">Британская длинношёрстная</string>
+    <string name="level_3_question_40_third_option">Кипрская</string>
+    <string name="level_3_question_40_fourth_option">Кхао-мани</string>
+
+    <string name="level_3_question_41_first_option">Бурманская</string>
+    <string name="level_3_question_41_second_option">Сингапурская</string>
+    <string name="level_3_question_41_third_option">Турецкая ангора</string>
+    <string name="level_3_question_41_fourth_option">Мейн-кун</string>
+
+    <string name="level_3_question_42_first_option">Манчкин длинношёрстный</string>
+    <string name="level_3_question_42_second_option">Мандалай</string>
+    <string name="level_3_question_42_third_option">Шартрез</string>
+    <string name="level_3_question_42_fourth_option">Бурманская</string>
+
+    <string name="level_3_question_43_first_option">Шартрез</string>
+    <string name="level_3_question_43_second_option">Йоркская шоколадная</string>
+    <string name="level_3_question_43_third_option">Европейская короткошёрстная</string>
+    <string name="level_3_question_43_fourth_option">Эгейская</string>
+
+    <string name="level_3_question_44_first_option">Анатолийская</string>
+    <string name="level_3_question_44_second_option">Оцикет</string>
+    <string name="level_3_question_44_third_option">Бенгальская</string>
+    <string name="level_3_question_44_fourth_option">Рагамаффин</string>
+
+    <string name="level_3_question_45_first_option">Австралийская дымчатая</string>
+    <string name="level_3_question_45_second_option">Сфинкс</string>
+    <string name="level_3_question_45_third_option">Тонкинская</string>
+    <string name="level_3_question_45_fourth_option">Гавана браун</string>
+
+    <string name="level_3_question_46_first_option">Абиссинская</string>
+    <string name="level_3_question_46_second_option">Норвежская лесная</string>
+    <string name="level_3_question_46_third_option">Дракон Ли</string>
+    <string name="level_3_question_46_fourth_option">Балинезийская</string>
+
+    <string name="level_3_question_47_first_option">Манчкин длинношёрстный</string>
+    <string name="level_3_question_47_second_option">Бурмилла</string>
+    <string name="level_3_question_47_third_option">Бразильская короткошёрстная</string>
+    <string name="level_3_question_47_fourth_option">Немецкий рекс</string>
+
 
     <!-- Level 4 -->
 
@@ -689,8 +844,8 @@
     <string name="level_4_question_14">Сколько нейронов в мозге кошки по сравнению с собакой?</string>
     <string name="level_4_question_14_first_option">Почти в два раза меньше</string>
     <string name="level_4_question_14_second_option">Почти в два раза больше</string>
-    <string name="level_4_question_14_third_option">Столько же</string>
-    <string name="level_4_question_14_fourth_option">В три раза больше</string>
+    <string name="level_4_question_14_third_option">Почти столько же</string>
+    <string name="level_4_question_14_fourth_option">Почти в три раза больше</string>
 
     <string name="level_4_question_15">Какой особенностью обладают белые кошки с голубыми глазами?</string>
     <string name="level_4_question_15_first_option">Они всегда самцы</string>
@@ -830,6 +985,84 @@
     <string name="level_4_question_37_third_option">30 см</string>
     <string name="level_4_question_37_fourth_option">50 см</string>
 
+    <string name="level_4_question_38_first_option">Петерболд</string>
+    <string name="level_4_question_38_second_option">Калифорнийская сияющая</string>
+    <string name="level_4_question_38_third_option">Сноу-шу</string>
+    <string name="level_4_question_38_fourth_option">Американская жесткошёрстная</string>
+
+    <string name="level_4_question_39_first_option">Хайлендер</string>
+    <string name="level_4_question_39_second_option">Донской сфинкс</string>
+    <string name="level_4_question_39_third_option">Серенгети</string>
+    <string name="level_4_question_39_fourth_option">Петерболд</string>
+
+    <string name="level_4_question_40_first_option">Канаани</string>
+    <string name="level_4_question_40_second_option">Мэнкс</string>
+    <string name="level_4_question_40_third_option">Украинский левкой</string>
+    <string name="level_4_question_40_fourth_option">Бурмилла</string>
+
+    <string name="level_4_question_41_first_option">Американский кёрл</string>
+    <string name="level_4_question_41_second_option">Бамбино</string>
+    <string name="level_4_question_41_third_option">Азиатская</string>
+    <string name="level_4_question_41_fourth_option">Саванна</string>
+
+    <string name="level_4_question_42_first_option">Сомалийская</string>
+    <string name="level_4_question_42_second_option">Кипрская</string>
+    <string name="level_4_question_42_third_option">Йоркская шоколадная</string>
+    <string name="level_4_question_42_fourth_option">Невская маскарадная</string>
+
+    <string name="level_4_question_43_first_option">Американский Рингтейл</string>
+    <string name="level_4_question_43_second_option">Египетский мау</string>
+    <string name="level_4_question_43_third_option">Японский бобтейл</string>
+    <string name="level_4_question_43_fourth_option">Норвежская лесная</string>
+
+    <string name="level_4_question_44_first_option">Австралийская дымчатая</string>
+    <string name="level_4_question_44_second_option">Американская короткошёрстная</string>
+    <string name="level_4_question_44_third_option">Гималайская</string>
+    <string name="level_4_question_44_fourth_option">Британская короткошёрстная</string>
+
+    <string name="level_4_question_45_first_option">Рагамаффин</string>
+    <string name="level_4_question_45_second_option">Сингапурская</string>
+    <string name="level_4_question_45_third_option">Шартрез</string>
+    <string name="level_4_question_45_fourth_option">Бомбейская</string>
+
+    <string name="level_4_question_46_first_option">Селкирк-рекс</string>
+    <string name="level_4_question_46_second_option">Тонкинская</string>
+    <string name="level_4_question_46_third_option">Шотландская вислоухая</string>
+    <string name="level_4_question_46_fourth_option">Двэльф</string>
+
+    <string name="level_4_question_47_first_option">Чаузи</string>
+    <string name="level_4_question_47_second_option">Турецкий ван</string>
+    <string name="level_4_question_47_third_option">Уральский рекс</string>
+    <string name="level_4_question_47_fourth_option">Бирманская</string>
+
+    <string name="level_4_question_48_first_option">Кимрик</string>
+    <string name="level_4_question_48_second_option">Мандалай</string>
+    <string name="level_4_question_48_third_option">Тайская</string>
+    <string name="level_4_question_48_fourth_option">Британская длинношёрстная</string>
+
+    <string name="level_4_question_49_first_option">Турецкий ван</string>
+    <string name="level_4_question_49_second_option">Нибелунг</string>
+    <string name="level_4_question_49_third_option">Ликой</string>
+    <string name="level_4_question_49_fourth_option">Рагамаффин</string>
+
+    <string name="level_4_question_50">Какой породы был самый длинный домашний кот в мире?</string>
+    <string name="level_4_question_50_first_option">Мейн-кун</string>
+    <string name="level_4_question_50_second_option">Кинкалоу</string>
+    <string name="level_4_question_50_third_option">Шартрез</string>
+    <string name="level_4_question_50_fourth_option">Саванна</string>
+
+    <string name="level_4_question_51">Какая особенность кошачьих лап помогает им ограничивать количество следов?</string>
+    <string name="level_4_question_51_first_option">Мягкие подушечки</string>
+    <string name="level_4_question_51_second_option">Втягивающиеся когти</string>
+    <string name="level_4_question_51_third_option">Задние лапы ступают по следам передних</string>
+    <string name="level_4_question_51_fourth_option">Особая структура костей</string>
+
+    <string name="level_4_question_52">Какой особенностью обладают уши кошек?</string>
+    <string name="level_4_question_52_first_option">Способность слышать ультразвук</string>
+    <string name="level_4_question_52_second_option">Наличие дополнительных слуховых косточек</string>
+    <string name="level_4_question_52_third_option">Имеют защитные механизмы от воды</string>
+    <string name="level_4_question_52_fourth_option">Способность двигать ими по отдельности</string>
+
 
     <!-- Level 5 -->
 
@@ -876,7 +1109,7 @@
     <string name="level_5_question_9_first_option">Кимрик</string>
     <string name="level_5_question_9_second_option">Бразильская короткошёрстная</string>
     <string name="level_5_question_9_third_option">Корат</string>
-    <string name="level_5_question_9_fourth_option">Бенгальская</string>
+    <string name="level_5_question_9_fourth_option">Двэльф</string>
 
     <string name="level_5_question_10_first_option">Бирманская</string>
     <string name="level_5_question_10_second_option">Охос азулес</string>
@@ -1080,6 +1313,121 @@
     <string name="level_5_question_44_third_option">Невской маскарадной</string>
     <string name="level_5_question_44_fourth_option">Кимрик</string>
 
+    <string name="level_5_question_45_first_option">Сингапурская</string>
+    <string name="level_5_question_45_second_option">Гималайская</string>
+    <string name="level_5_question_45_third_option">Японский бобтейл</string>
+    <string name="level_5_question_45_fourth_option">Донской сфинкс</string>
+
+    <string name="level_5_question_46_first_option">Экзотическая короткошёрстная</string>
+    <string name="level_5_question_46_second_option">Американский кёрл</string>
+    <string name="level_5_question_46_third_option">Той-боб</string>
+    <string name="level_5_question_46_fourth_option">Кинкалоу</string>
+
+    <string name="level_5_question_47_first_option">Домашняя короткошёрстная</string>
+    <string name="level_5_question_47_second_option">Шантильи тиффани</string>
+    <string name="level_5_question_47_third_option">Лаперм</string>
+    <string name="level_5_question_47_fourth_option">Дракон Ли</string>
+
+    <string name="level_5_question_48_first_option">Персидская</string>
+    <string name="level_5_question_48_second_option">Наполеон</string>
+    <string name="level_5_question_48_third_option">Сомалийская</string>
+    <string name="level_5_question_48_fourth_option">Тойгер</string>
+
+    <string name="level_5_question_49_first_option">Пиксибоб</string>
+    <string name="level_5_question_49_second_option">Скукум</string>
+    <string name="level_5_question_49_third_option">Абиссинская</string>
+    <string name="level_5_question_49_fourth_option">Яванез</string>
+
+    <string name="level_5_question_50_first_option">Тойгер</string>
+    <string name="level_5_question_50_second_option">Корат</string>
+    <string name="level_5_question_50_third_option">Гавана браун</string>
+    <string name="level_5_question_50_fourth_option">Кхао-мани</string>
+
+    <string name="level_5_question_51_first_option">Ламбкин</string>
+    <string name="level_5_question_51_second_option">Охос азулес</string>
+    <string name="level_5_question_51_third_option">Европейская короткошёрстная</string>
+    <string name="level_5_question_51_fourth_option">Ориентальная</string>
+
+    <string name="level_5_question_52_first_option">Сибирская</string>
+    <string name="level_5_question_52_second_option">Манчкин</string>
+    <string name="level_5_question_52_third_option">Калифорнийская сияющая</string>
+    <string name="level_5_question_52_fourth_option">Гавана браун</string>
+
+    <string name="level_5_question_53_first_option">Кимрик</string>
+    <string name="level_5_question_53_second_option">Анатолийская</string>
+    <string name="level_5_question_53_third_option">Бурманская</string>
+    <string name="level_5_question_53_fourth_option">Аравийский мау</string>
+
+    <string name="level_5_question_54_first_option">Лаперм</string>
+    <string name="level_5_question_54_second_option">Охос азулес</string>
+    <string name="level_5_question_54_third_option">Мандалай</string>
+    <string name="level_5_question_54_fourth_option">Оцикет</string>
+
+    <string name="level_5_question_55_first_option">Фолдекс</string>
+    <string name="level_5_question_55_second_option">Австралийская дымчатая</string>
+    <string name="level_5_question_55_third_option">Немецкий рекс</string>
+    <string name="level_5_question_55_fourth_option">Британская длинношёрстная</string>
+
+    <string name="level_5_question_56_first_option">Петерболд</string>
+    <string name="level_5_question_56_second_option">Бразильская короткошёрстная</string>
+    <string name="level_5_question_56_third_option">Тайская</string>
+    <string name="level_5_question_56_fourth_option">Американская жесткошёрстная</string>
+
+    <string name="level_5_question_57_first_option">Азиатская</string>
+    <string name="level_5_question_57_second_option">Бомбейская</string>
+    <string name="level_5_question_57_third_option">Цейлонская</string>
+    <string name="level_5_question_57_fourth_option">Рэгдолл</string>
+
+    <string name="level_5_question_58_first_option">Украинский левкой</string>
+    <string name="level_5_question_58_second_option">Австралийская дымчатая</string>
+    <string name="level_5_question_58_third_option">Сфинкс</string>
+    <string name="level_5_question_58_fourth_option">Суфалак</string>
+
+    <string name="level_5_question_59_first_option">Пиксибоб</string>
+    <string name="level_5_question_59_second_option">Тойгер</string>
+    <string name="level_5_question_59_third_option">Бурмилла</string>
+    <string name="level_5_question_59_fourth_option">Шотландская прямоухая</string>
+
+    <string name="level_5_question_60_first_option">Корат</string>
+    <string name="level_5_question_60_second_option">Бамбино</string>
+    <string name="level_5_question_60_third_option">Сиамская</string>
+    <string name="level_5_question_60_fourth_option">Уральский рекс</string>
+
+    <string name="level_5_question_61_first_option">Японский бобтейл</string>
+    <string name="level_5_question_61_second_option">Сококе</string>
+    <string name="level_5_question_61_third_option">Рагамаффин</string>
+    <string name="level_5_question_61_fourth_option">Гигантская Афродита</string>
+
+    <string name="level_5_question_62">В какой стране из перечисленных считается, что чёрные кошки приносят удачу?</string>
+    <string name="level_5_question_62_first_option">Россия</string>
+    <string name="level_5_question_62_second_option">Великобритания</string>
+    <string name="level_5_question_62_third_option">Канада</string>
+    <string name="level_5_question_62_fourth_option">Мексика</string>
+
+    <string name="level_5_question_63">Какую примерно максимальную скорость может развивать домашняя кошка?</string>
+    <string name="level_5_question_63_first_option">48 км/ч</string>
+    <string name="level_5_question_63_second_option">60 км/ч</string>
+    <string name="level_5_question_63_third_option">35 км/ч</string>
+    <string name="level_5_question_63_fourth_option">23 км/ч</string>
+
+    <string name="level_5_question_64">Что делали члены семьи в Древнем Египте, когда умирала их домашняя кошка?</string>
+    <string name="level_5_question_64_first_option">Красили волосы в чёрный цвет</string>
+    <string name="level_5_question_64_second_option">Постились 7 дней</string>
+    <string name="level_5_question_64_third_option">Сбривали брови</string>
+    <string name="level_5_question_64_fourth_option">Приносили жертву богам</string>
+
+    <string name="level_5_question_65">Сколько лет прожил самый старый кот в мире по имени Крим Пафф?</string>
+    <string name="level_5_question_65_first_option">27 лет</string>
+    <string name="level_5_question_65_second_option">33 года</string>
+    <string name="level_5_question_65_third_option">38 лет</string>
+    <string name="level_5_question_65_fourth_option">44 года</string>
+
+    <string name="level_5_question_66">Как передаётся чувствительность к кошачьей мяте у кошек?</string>
+    <string name="level_5_question_66_first_option">Через пищу</string>
+    <string name="level_5_question_66_second_option">Через взаимодействие с почвой, где растёт мята</string>
+    <string name="level_5_question_66_third_option">Наследственным путём</string>
+    <string name="level_5_question_66_fourth_option">Через контакт с другими кошками, имеющими такую чувствительность</string>
+
 
     <!-- Level 6 -->
 
@@ -1155,7 +1503,7 @@
 
     <string name="level_6_question_15_first_option">Минскин</string>
     <string name="level_6_question_15_second_option">Аравийский мау</string>
-    <string name="level_6_question_15_third_option">Рагамаффин</string>
+    <string name="level_6_question_15_third_option">Бразильская короткошёрстная</string>
     <string name="level_6_question_15_fourth_option">Гималайская</string>
 
     <string name="level_6_question_16_first_option">Домашняя короткошёрстная</string>
@@ -1270,11 +1618,11 @@
     <string name="level_6_question_34_third_option">90</string>
     <string name="level_6_question_34_fourth_option">67</string>
 
-    <string name="level_6_question_35">Какую сумму получил кот Томмазино в наследство, благодаря которой он стал самым богатым котом в мире?</string>
-    <string name="level_6_question_35_first_option">10 миллионов евро</string>
-    <string name="level_6_question_35_second_option">1 миллион евро</string>
-    <string name="level_6_question_35_third_option">30 миллионов евро</string>
-    <string name="level_6_question_35_fourth_option">100 тысяч евро</string>
+    <string name="level_6_question_35">Какую сумму получил кот Блэки в наследство, благодаря которой он стал самым богатым котом в мире и был занесён в книгу рекордов Гиннесса?</string>
+    <string name="level_6_question_35_first_option">7,5 миллионов фунтов стерлингов</string>
+    <string name="level_6_question_35_second_option">500 тысяч фунтов стерлингов</string>
+    <string name="level_6_question_35_third_option">2 миллиона фунтов стерлингов</string>
+    <string name="level_6_question_35_fourth_option">16,5 миллионов фунтов стерлингов</string>
 
     <string name="level_6_question_36">Какой тип клеток в сетчатке глаза кошки отвечает за ночное зрение?</string>
     <string name="level_6_question_36_first_option">Колбочки</string>
@@ -1360,6 +1708,133 @@
     <string name="level_6_question_49_third_option">140–160 ударов</string>
     <string name="level_6_question_49_fourth_option">50–60 ударов</string>
 
+    <string name="level_6_question_50_first_option">Калифорнийская сияющая</string>
+    <string name="level_6_question_50_second_option">Оцикет</string>
+    <string name="level_6_question_50_third_option">Манчкин длинношёрстный</string>
+    <string name="level_6_question_50_fourth_option">Русская голубая</string>
+
+    <string name="level_6_question_51_first_option">Балинезийская</string>
+    <string name="level_6_question_51_second_option">Шантильи тиффани</string>
+    <string name="level_6_question_51_third_option">Европейская короткошёрстная</string>
+    <string name="level_6_question_51_fourth_option">Минскин</string>
+
+    <string name="level_6_question_52_first_option">Корниш-рекс</string>
+    <string name="level_6_question_52_second_option">Эгейская</string>
+    <string name="level_6_question_52_third_option">Хайлендер</string>
+    <string name="level_6_question_52_fourth_option">Балинезийская</string>
+
+    <string name="level_6_question_53_first_option">Дракон Ли</string>
+    <string name="level_6_question_53_second_option">Бурманская</string>
+    <string name="level_6_question_53_third_option">Ориентальная</string>
+    <string name="level_6_question_53_fourth_option">Канаани</string>
+
+    <string name="level_6_question_54_first_option">Кхао-мани</string>
+    <string name="level_6_question_54_second_option">Тонкинская</string>
+    <string name="level_6_question_54_third_option">Шотландская вислоухая</string>
+    <string name="level_6_question_54_fourth_option">Сноу-шу</string>
+
+    <string name="level_6_question_55_first_option">Британская короткошёрстная</string>
+    <string name="level_6_question_55_second_option">Минскин</string>
+    <string name="level_6_question_55_third_option">Яванез</string>
+    <string name="level_6_question_55_fourth_option">Кинкалоу</string>
+
+    <string name="level_6_question_56_first_option">Рэгдолл</string>
+    <string name="level_6_question_56_second_option">Хайлендер</string>
+    <string name="level_6_question_56_third_option">Наполеон</string>
+    <string name="level_6_question_56_fourth_option">Калифорнийская сияющая</string>
+
+    <string name="level_6_question_57_first_option">Пиксибоб</string>
+    <string name="level_6_question_57_second_option">Норвежская лесная</string>
+    <string name="level_6_question_57_third_option">Сфинкс</string>
+    <string name="level_6_question_57_fourth_option">Серенгети</string>
+
+    <string name="level_6_question_58_first_option">Сноу-шу</string>
+    <string name="level_6_question_58_second_option">Американский Рингтейл</string>
+    <string name="level_6_question_58_third_option">Сибирская</string>
+    <string name="level_6_question_58_fourth_option">Суфалак</string>
+
+    <string name="level_6_question_59_first_option">Корат</string>
+    <string name="level_6_question_59_second_option">Сококе</string>
+    <string name="level_6_question_59_third_option">Той-боб</string>
+    <string name="level_6_question_59_fourth_option">Экзотическая короткошёрстная</string>
+
+    <string name="level_6_question_60_first_option">Курильский бобтейл</string>
+    <string name="level_6_question_60_second_option">Японский бобтейл</string>
+    <string name="level_6_question_60_third_option">Той-боб</string>
+    <string name="level_6_question_60_fourth_option">Девон-рекс</string>
+
+    <string name="level_6_question_61_first_option">Шотландская прямоухая</string>
+    <string name="level_6_question_61_second_option">Британская короткошёрстная</string>
+    <string name="level_6_question_61_third_option">Сококе</string>
+    <string name="level_6_question_61_fourth_option">Йоркская шоколадная</string>
+
+    <string name="level_6_question_62_first_option">Эгейская</string>
+    <string name="level_6_question_62_second_option">Цейлонская</string>
+    <string name="level_6_question_62_third_option">Гигантская Афродита</string>
+    <string name="level_6_question_62_fourth_option">Наполеон</string>
+
+    <string name="level_6_question_63_first_option">Серенгети</string>
+    <string name="level_6_question_63_second_option">Аравийский мау</string>
+    <string name="level_6_question_63_third_option">Саванна</string>
+    <string name="level_6_question_63_fourth_option">Кипрская</string>
+
+    <string name="level_6_question_64_first_option">Ламбкин</string>
+    <string name="level_6_question_64_second_option">Турецкий ван</string>
+    <string name="level_6_question_64_third_option">Бразильская короткошёрстная</string>
+    <string name="level_6_question_64_fourth_option">Корниш-рекс</string>
+
+    <string name="level_6_question_65_first_option">Лаперм</string>
+    <string name="level_6_question_65_second_option">Американская короткошёрстная</string>
+    <string name="level_6_question_65_third_option">Тойгер</string>
+    <string name="level_6_question_65_fourth_option">Цейлонская</string>
+
+    <string name="level_6_question_66_first_option">Анатолийская</string>
+    <string name="level_6_question_66_second_option">Русская голубая</string>
+    <string name="level_6_question_66_third_option">Американский кёрл</string>
+    <string name="level_6_question_66_fourth_option">Шантильи тиффани</string>
+
+    <string name="level_6_question_67">Из скольких позвонков состоит позвоночник кошки?</string>
+    <string name="level_6_question_67_first_option">Примерно из 20</string>
+    <string name="level_6_question_67_second_option">Примерно из 50</string>
+    <string name="level_6_question_67_third_option">Примерно из 35</string>
+    <string name="level_6_question_67_fourth_option">Примерно из 65</string>
+
+    <string name="level_6_question_68">Кто считается изобретателем дверцы для кошек?</string>
+    <string name="level_6_question_68_first_option">Альберт Эйнштейн</string>
+    <string name="level_6_question_68_second_option">Никола Тесла</string>
+    <string name="level_6_question_68_third_option">Исаак Ньютон</string>
+    <string name="level_6_question_68_fourth_option">Чарльз Дарвин</string>
+
+    <string name="level_6_question_69">Как звали первую и единственную кошку, побывавшую в космосе?</string>
+    <string name="level_6_question_69_first_option">Белка</string>
+    <string name="level_6_question_69_second_option">Блэки</string>
+    <string name="level_6_question_69_third_option">Томмазино</string>
+    <string name="level_6_question_69_fourth_option">Фелисетт</string>
+
+    <string name="level_6_question_70">Примерно с какой громкостью мурлыкает большинство кошек?</string>
+    <string name="level_6_question_70_first_option">Около 11 дБ</string>
+    <string name="level_6_question_70_second_option">Около 57 дБ</string>
+    <string name="level_6_question_70_third_option">Около 40 дБ</string>
+    <string name="level_6_question_70_fourth_option">Около 25 дБ</string>
+
+    <string name="level_6_question_71">Какой примерно длины был самый длинный в мире домашний кот по имени Стьюи?</string>
+    <string name="level_6_question_71_first_option">123 см</string>
+    <string name="level_6_question_71_second_option">107 см</string>
+    <string name="level_6_question_71_third_option">136 см</string>
+    <string name="level_6_question_71_fourth_option">149 см</string>
+
+    <string name="level_6_question_72">Какой примерно высоты был самый высокий в мире домашний кот по имени Фенрир Антарес Пауэрс?</string>
+    <string name="level_6_question_72_first_option">41,0 см</string>
+    <string name="level_6_question_72_second_option">47,8 см</string>
+    <string name="level_6_question_72_third_option">58,3 см</string>
+    <string name="level_6_question_72_fourth_option">66,7 см</string>
+
+    <string name="level_6_question_73">Почему по большей степени у кошек не бывает тех типов кариеса, которые бывают у людей?</string>
+    <string name="level_6_question_73_first_option">Из-за частого питья воды</string>
+    <string name="level_6_question_73_second_option">Из-за частого умывания</string>
+    <string name="level_6_question_73_third_option">Из-за заостренной формы зубов</string>
+    <string name="level_6_question_73_fourth_option">Из-за особого состава слюны</string>
+
 
     <!-- Level 7 -->
 
@@ -1391,7 +1866,7 @@
     <string name="level_7_question_6_first_option">Яванез</string>
     <string name="level_7_question_6_second_option">Нибелунг</string>
     <string name="level_7_question_6_third_option">Кипрская</string>
-    <string name="level_7_question_6_fourth_option">Тонкинская</string>
+    <string name="level_7_question_6_fourth_option">Ликой</string>
 
     <string name="level_7_question_7_first_option">Двэльф</string>
     <string name="level_7_question_7_second_option">Мейн-кун</string>
@@ -1456,7 +1931,7 @@
 
     <string name="level_7_question_19">На какой частоте мурлыкают кошки?</string>
     <string name="level_7_question_19_first_option">20–30 Гц</string>
-    <string name="level_7_question_19_second_option">50–60 Гц</string>
+    <string name="level_7_question_19_second_option">50–60 Гц Гц</string>
     <string name="level_7_question_19_third_option">90–100 Гц</string>
     <string name="level_7_question_19_fourth_option">240–250 Гц</string>
 
@@ -1522,7 +1997,7 @@
 
     <string name="level_7_question_30">Какая порода кошек получилась в результате скрещивания американской короткошёрстной кошки с персидской?</string>
     <string name="level_7_question_30_first_option">Курильский бобтейл</string>
-    <string name="level_7_question_30_second_option">Экзотическая</string>
+    <string name="level_7_question_30_second_option">Экзотическая короткошёрстная</string>
     <string name="level_7_question_30_third_option">Мандалай</string>
     <string name="level_7_question_30_fourth_option">Американская жесткошёрстная</string>
 
@@ -1681,4 +2156,119 @@
     <string name="level_7_question_56_second_option">1910 год, США</string>
     <string name="level_7_question_56_third_option">1990 год, Китай</string>
     <string name="level_7_question_56_fourth_option">1950 год, Канада</string>
+
+    <string name="level_7_question_57_first_option">Кипрская</string>
+    <string name="level_7_question_57_second_option">Селкирк-рекс</string>
+    <string name="level_7_question_57_third_option">Кимрик</string>
+    <string name="level_7_question_57_fourth_option">Мэнкс</string>
+
+    <string name="level_7_question_58_first_option">Невская маскарадная</string>
+    <string name="level_7_question_58_second_option">Двэльф</string>
+    <string name="level_7_question_58_third_option">Саванна</string>
+    <string name="level_7_question_58_fourth_option">Кхао-мани</string>
+
+    <string name="level_7_question_59_first_option">Манчкин длинношёрстный</string>
+    <string name="level_7_question_59_second_option">Фолдекс</string>
+    <string name="level_7_question_59_third_option">Чаузи</string>
+    <string name="level_7_question_59_fourth_option">Американская жесткошёрстная</string>
+
+    <string name="level_7_question_60_first_option">Селкирк-рекс</string>
+    <string name="level_7_question_60_second_option">Аравийский мау</string>
+    <string name="level_7_question_60_third_option">Йоркская шоколадная</string>
+    <string name="level_7_question_60_fourth_option">Ликой</string>
+
+    <string name="level_7_question_61_first_option">Мэнкс</string>
+    <string name="level_7_question_61_second_option">Манчкин</string>
+    <string name="level_7_question_61_third_option">Шартрез</string>
+    <string name="level_7_question_61_fourth_option">Гималайская</string>
+
+    <string name="level_7_question_62_first_option">Эгейская</string>
+    <string name="level_7_question_62_second_option">Нибелунг</string>
+    <string name="level_7_question_62_third_option">Донской сфинкс</string>
+    <string name="level_7_question_62_fourth_option">Бомбейская</string>
+
+    <string name="level_7_question_63_first_option">Тайская</string>
+    <string name="level_7_question_63_second_option">Охос азулес</string>
+    <string name="level_7_question_63_third_option">Скукум</string>
+    <string name="level_7_question_63_fourth_option">Двэльф</string>
+
+    <string name="level_7_question_64_first_option">Скукум</string>
+    <string name="level_7_question_64_second_option">Британская длинношёрстная</string>
+    <string name="level_7_question_64_third_option">Бурмилла</string>
+    <string name="level_7_question_64_fourth_option">Суфалак</string>
+
+    <string name="level_7_question_65_first_option">Гигантская Афродита</string>
+    <string name="level_7_question_65_second_option">Чаузи</string>
+    <string name="level_7_question_65_third_option">Нибелунг</string>
+    <string name="level_7_question_65_fourth_option">Домашняя короткошёрстная</string>
+
+    <string name="level_7_question_66_first_option">Турецкая ангора</string>
+    <string name="level_7_question_66_second_option">Американский Рингтейл</string>
+    <string name="level_7_question_66_third_option">Рагамаффин</string>
+    <string name="level_7_question_66_fourth_option">Египетский мау</string>
+
+    <string name="level_7_question_67_first_option">Анатолийская</string>
+    <string name="level_7_question_67_second_option">Сиамская</string>
+    <string name="level_7_question_67_third_option">Бамбино</string>
+    <string name="level_7_question_67_fourth_option">Абиссинская</string>
+
+    <string name="level_7_question_68_first_option">Минскин</string>
+    <string name="level_7_question_68_second_option">Уральский рекс</string>
+    <string name="level_7_question_68_third_option">Саванна</string>
+    <string name="level_7_question_68_fourth_option">Дракон Ли</string>
+
+    <string name="level_7_question_69_first_option">Фолдекс</string>
+    <string name="level_7_question_69_second_option">Бенгальская</string>
+    <string name="level_7_question_69_third_option">Бирманская</string>
+    <string name="level_7_question_69_fourth_option">Персидская</string>
+
+    <string name="level_7_question_70_first_option">Европейская короткошёрстная</string>
+    <string name="level_7_question_70_second_option">Кинкалоу</string>
+    <string name="level_7_question_70_third_option">Немецкий рекс</string>
+    <string name="level_7_question_70_fourth_option">Ликой</string>
+
+    <string name="level_7_question_71_first_option">Сингапурская</string>
+    <string name="level_7_question_71_second_option">Гавана браун</string>
+    <string name="level_7_question_71_third_option">Ламбкин</string>
+    <string name="level_7_question_71_fourth_option">Манчкин</string>
+
+    <string name="level_7_question_72_first_option">Рэгдолл</string>
+    <string name="level_7_question_72_second_option">Бамбино</string>
+    <string name="level_7_question_72_third_option">Мейн-кун</string>
+    <string name="level_7_question_72_fourth_option">Мандалай</string>
+
+    <string name="level_7_question_73_first_option">Яванез</string>
+    <string name="level_7_question_73_second_option">Украинский левкой</string>
+    <string name="level_7_question_73_third_option">Сиамская</string>
+    <string name="level_7_question_73_fourth_option">Сомалийская</string>
+
+    <string name="level_7_question_74">В каком году состоялся первый полет кошки в космос?</string>
+    <string name="level_7_question_74_first_option">1980 г.</string>
+    <string name="level_7_question_74_second_option">1963 г.</string>
+    <string name="level_7_question_74_third_option">1946 г.</string>
+    <string name="level_7_question_74_fourth_option">1958 г.</string>
+
+    <string name="level_7_question_75">Сколько вкусовых рецепторов находится на языке кошки?</string>
+    <string name="level_7_question_75_first_option">161</string>
+    <string name="level_7_question_75_second_option">609</string>
+    <string name="level_7_question_75_third_option">473</string>
+    <string name="level_7_question_75_fourth_option">298</string>
+
+    <string name="level_7_question_76">Какой рекорд громкости мурлыканья установил домашний кот Мерлин?</string>
+    <string name="level_7_question_76_first_option">75,1 дБ</string>
+    <string name="level_7_question_76_second_option">51,3 дБ</string>
+    <string name="level_7_question_76_third_option">59,2 дБ</string>
+    <string name="level_7_question_76_fourth_option">67,8 дБ</string>
+
+    <string name="level_7_question_77">Какое химическое соединение в кошачьей мяте влияет на кошек?</string>
+    <string name="level_7_question_77_first_option">Непеталактон</string>
+    <string name="level_7_question_77_second_option">Фелинин</string>
+    <string name="level_7_question_77_third_option">Адреналин</string>
+    <string name="level_7_question_77_fourth_option">Дофамин</string>
+
+    <string name="level_7_question_78">Мэром какого города на протяжении 20 лет был кот по имени Стаббс?</string>
+    <string name="level_7_question_78_first_option">Торки, Великобритания</string>
+    <string name="level_7_question_78_second_option">Талкитна, Аляска</string>
+    <string name="level_7_question_78_third_option">Тверь, Россия</string>
+    <string name="level_7_question_78_fourth_option">Ичан, Китай</string>
 </resources>
